@@ -2,3 +2,9 @@
 bin/
 lib/
 include/
+/.Python
+/Pipfile
+/Pipfile.lock
+/pip-selfcheck.json
+/.project
+/.pydevproject
