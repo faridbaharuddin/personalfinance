@@ -6,8 +6,8 @@ def _initialize_blueprints (application):
     '''
     from app.views.transaction import transaction
     from app.views.category import category
-    application.register_blueprint(transaction, url_prefix='/api/v1/transaction')
-    application.register_blueprint(category, url_prefix='/api/v1/category')
+    application.register_blueprint(transaction, url_prefix='/api/v1/transactions')
+    application.register_blueprint(category, url_prefix='/api/v1/categories')
     
 def create_app():
     application = Flask(__name__)
