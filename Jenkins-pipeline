@@ -8,6 +8,8 @@ pipeline {
 		}
 		stage ('Run server') {
 			steps {
+				sh 'virtualenv venv --distribute'
+				sh '. venv/bin/activate' 
 				sh 'pip install Flask'
 				sh 'python start-app.py'
 			}
