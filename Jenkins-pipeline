@@ -4,6 +4,7 @@ pipeline {
 		stage ('Hello from github') {
 			steps {
 				echo "Hello world!"
+				git 'https://github.com/faridbaharuddin/personalfinance.git'
 			}
 		}
 	}
