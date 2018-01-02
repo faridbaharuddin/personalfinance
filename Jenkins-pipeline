@@ -1,10 +1,14 @@
 pipeline {
 	agent any
 	stages {
-		stage ('Hello from github') {
+		stage ('Retrieve updates from Github') {
 			steps {
-				echo "Hello world!"
 				git 'https://github.com/faridbaharuddin/personalfinance.git'
+			}
+		}
+		stage ('Run server') {
+			steps {
+				sh 'python start-app.py'
 			}
 		}
 	}
