@@ -8,6 +8,7 @@ pipeline {
 		}
 		stage ('Run server') {
 			steps {
+				sh 'pip install Flask'
 				sh 'python start-app.py'
 			}
 		}
